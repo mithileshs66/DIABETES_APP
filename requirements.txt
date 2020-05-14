@@ -10,5 +10,12 @@ wincertstore==0.2
 boost==0.1
 numpy==1.15.4
 pandas==0.23.4
-
-
+appdirs==1.4.3
+distlib==0.3.0
+filelock==3.0.12
+importlib-metadata==1.6.0
+pipenv==2018.11.26
+six==1.14.0
+virtualenv==20.0.16
+virtualenv-clone==0.5.4
+zipp==3.1.0
