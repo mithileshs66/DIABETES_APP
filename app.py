@@ -16,7 +16,7 @@ def index():
 
 
 @app.route('/upload1', methods=['POST'])
-def upload():
+def upload1():
     # Attributes name in csv file
     columns = ['Age', 'BSfast', 'BSpp', 'PlasmaR', 'PlasmaF', 'HbA1c', 'Type', 'Class']
 
