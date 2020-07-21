@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <title>Diabetes Prediction</title>
+    <style>
+    body {
+          background-image: url(download.jpg);
+
+          background-repeat: no-repeat; /* Do not repeat the image */
+          background-size: cover; /* Resize the background image to cover the entire container */
+         }
+    td{
+        font-weight:bold;
+       }
+</style>
+</head>
+<body>
+<form action="/upload1" method="post">
+    <div class="container">
+        <h2>Diabetes Prediction</h2>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th>Tests</th>
+        <th>Values</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Age</td>
+        <td><input type="number" name="age"></td>
+      </tr>
+      <tr>
+        <td>Blood Sugar in Fasting</td>
+        <td><input type="number" name="bsf" step="0.0001"></td>
+      </tr>
+      <tr>
+        <td>Blood Sugar after meal</td>
+        <td><input type="number" name="bsaf" step="0.0001"></td>
+      </tr>
+      <tr>
+        <td>Plasma glucose test random</td>
+        <td><input type="number" name="prand" step="0.0001"></td>
+      </tr>
+      <tr>
+        <td>Plasma glucose test fasting</td>
+        <td><input type="number" name="pfast" step="0.0001"></td>
+      </tr>
+      <tr>
+        <td>Haemoglobin(HbA1c)</td>
+        <td><input type="number" name="haemo" step="0.0001"></td>
+      </tr>
+          <td></td>
+          <td><input type="submit" value="Predict"></td>
+      </tr>
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <tr>
+                <td><h2>Results</h2></td>
+               {% for message in messages %}
+                <td><h2>{{ message }}</h2></td>
+               {% endfor %}
+            </tr>
+         {% endif %}
+      {% endwith %}
+    </tbody>
+  </table>
+</div>
+</form>
+</body>
+</html>
